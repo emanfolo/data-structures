@@ -1,0 +1,7 @@
+Binary trees: 
+
+Full: All nodes have two children, but it is not complete
+
+Complete: Nodes are filled out top to bottom, left to right
+
+Perfect: Nodes are both full and complete
