@@ -11,23 +11,30 @@ class BinaryTreeNode
 }
 
 let root = null
-root = new BinaryTreeNode(1)
-root.left = new BinaryTreeNode(2)
-root.right = new BinaryTreeNode(5)
-root.left.left = new BinaryTreeNode(4)
-root.left.right = new BinaryTreeNode(17)
-root.right.right = new BinaryTreeNode(11)
-root.right.left = new BinaryTreeNode(99)
+root = new BinaryTreeNode(7)
+root.left = new BinaryTreeNode(3)
+root.right = new BinaryTreeNode(9)
+root.left.left = new BinaryTreeNode(1)
+root.left.left.right = new BinaryTreeNode(2)
+root.left.right = new BinaryTreeNode(5)
+root.left.right.right = new BinaryTreeNode(6)
+root.left.right.left = new BinaryTreeNode(4)
+root.right.right = new BinaryTreeNode(10)
+root.right.left = new BinaryTreeNode(8)
 
 function inOrder(node) {
-   if (node !== null) {
-      inOrder(node.left);
-      console.log(node.data);
-      inOrder(node.right);
-   }
+   let output = []
+    if (node){
+      if (!!node.left) output = output.concat(inOrder(node.left));
+      console.log(node.data)
+      output.push(node.data);
+      if (!!node.right) output = output.concat(inOrder(node.right)); 
+      }
+    return output
 }
 
 inOrder(root)
+
 
 
 
