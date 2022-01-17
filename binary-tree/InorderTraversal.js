@@ -34,12 +34,3 @@ function inOrder(node) {
 }
 
 inOrder(root)
-
-
-
-
-// function inOrder(node) { 
-//    node.left && inOrder(node.left) 
-//    console.log(node.val) 
-//    node.right && inOrder(node.right) 
-// }
