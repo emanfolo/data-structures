@@ -24,15 +24,15 @@ root.right = new BinaryTreeNode(8)
 root.right.right = new BinaryTreeNode(10)
 root.right.left = new BinaryTreeNode(9)
 
-function preOrder(node) {
+function postOrder(node) {
    let output = []
     if (node){
+      if (!!node.left) output = output.concat(postOrder(node.left));
+      if (!!node.right) output = output.concat(postOrder(node.right)); 
       console.log(node.data)
       output.push(node.data);
-      if (!!node.left) output = output.concat(preOrder(node.left));
-      if (!!node.right) output = output.concat(preOrder(node.right)); 
       }
     return output
 }
 
-preOrder(root)
+postOrder(root)
